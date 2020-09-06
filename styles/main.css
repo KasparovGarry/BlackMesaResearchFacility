@@ -8,6 +8,12 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 nav {
     font-size: 20px;
     display: flex;
@@ -119,12 +125,30 @@ nav ul li a:hover::after {
     display: none;
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://imgbbb.com/images/2020/09/06/banner1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner p {
+    font-size: 86px;
+    color: #ececec;
+    text-shadow: 0 3px 11px black;
+
+}
+
 @media screen and (max-width: 768px) {
     .burger {
         display: inline-block;
     }
 
-    .navlinks {
+    .navLinks {
         position: absolute;
         top: 94px;
         right: 0;
@@ -145,7 +169,7 @@ nav ul li a:hover::after {
         right: 0;
         bottom: 0;
         left: 0;
-        width: 100vh;
+        width: 100vw;
         height: 100vh;
         display: none;
         background: rgba(0, 0, 0, 0.49);
