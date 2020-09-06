@@ -19,10 +19,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1F445B;
+    background-color: transparent;
     height: 94px;
     padding: 0 60px;
     z-index: 5;
+    transition: background .2s ease;
+}
+
+nav.scrolled {
+    background-color: #1F445B;
 }
 
 .logo {
@@ -47,7 +52,7 @@ nav {
 }
 
 .logo:hover svg {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 nav ul {
@@ -129,7 +134,7 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     background-image: url(https://imgbbb.com/images/2020/09/06/banner1.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -144,6 +149,10 @@ nav ul li a:hover::after {
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+        background-color: #1F445B;
+    }
+    
     .burger {
         display: inline-block;
     }
