@@ -21,6 +21,7 @@ nav {
 
 .logo {
     color: #C9E1ED;
+    font-family: 'Cabin', sans-serif;
 }
 
 .logo:hover {
@@ -62,6 +63,7 @@ nav ul li {
 nav ul li a {
     color: #C9E1ED;
     position: relative;
+    font-family: 'Rubik', sans-serif;
 }
 
 nav ul li a::after {
@@ -113,21 +115,8 @@ nav ul li a:hover::after {
     transform: rotate(45deg) translate(-6px, -8px) ;
 }
 
-.navbar-darkBG {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vh;
-    display: none;
-    background: rgba(0, 0, 0, 0.49);
-    z-index: -1;
-}
-
 .navbar-darkBG.show {
-    display: block;
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -148,6 +137,23 @@ nav ul li a:hover::after {
         background-color: #1F445B;
         transform: translateX(100%);
         transition: all .5s ease;
+    }
+
+    .navbar-darkBG {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        display: none;
+        background: rgba(0, 0, 0, 0.49);
+        z-index: -1;
+    }
+
+    .navbar-darkBG.show {
+        display: block;
     }
 }
 
