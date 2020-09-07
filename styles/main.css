@@ -200,16 +200,22 @@ main {
     background-color: #e8e8e8;
 }
 
+.bg3 {
+    background-color: rgba(38, 84, 112, 0.75);
+}
+
 .p1 .col-lg:nth-child(1),
 .p2 .col-lg:nth-child(1),
-.p3 .col-lg:nth-child(1) {
+.p3 .col-lg:nth-child(1),
+.p5 .col-lg:nth-child(1){
     display: flex;
     align-items: center;
 }
 
 .p1 p,
 .p2 p,
-.p3 p {
+.p3 p,
+.p5 p {
     font-size: 24px;
     font-weight: 500;
     font-family: 'Titillium Web', sans-serif;
@@ -217,7 +223,8 @@ main {
 
 .p1 img,
 .p2 img,
-.p3 img {
+.p3 img,
+.p5 img {
     width: 100%;
     height: 450px;
     object-fit: cover;
@@ -226,6 +233,52 @@ main {
 .p2 .row {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.p4, .p6 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p4 {
+    background-image: url(https://imgbbb.com/images/2020/09/07/img12.png);
+}
+
+.p4 .bg3,
+.p6 .bg3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.p4 p,
+.p6 p {
+    padding: 0 60px;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Cabin', sans-serif;
+    color: #ececec;
+    text-shadow: 0 3px 11px black;
+    z-index: 1;
+}
+
+.p4 p {
+    font-size: 30px;
+}
+
+.p6 {
+    background-image: url(https://imgbbb.com/images/2020/09/07/img9.png);
+}
+
+.p6 p {
+    font-size: 36px;
 }
 
 @media screen and (max-width: 768px) {

@@ -28,6 +28,24 @@ const navSlide = () => {
 
 navSlide();
 
+const scroll = () => {
+    const navbar = $("nav");
+
+    if (navbar.scrollTop() > 0) {
+        navbar.classList.add("scrolled");
+    }
+}
+
+
+
 $(window).scroll(function () {
     $("nav").toggleClass("scrolled", $(this).scrollTop() > 0);
 });
+
+scroll();
+
+
+
+
+
+
