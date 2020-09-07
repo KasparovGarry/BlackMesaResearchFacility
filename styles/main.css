@@ -12,6 +12,11 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 23;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 nav {
@@ -22,7 +27,8 @@ nav {
     background-color: transparent;
     height: 94px;
     padding: 0 60px;
-    z-index: 5;
+    z-index: 1;
+    letter-spacing: 2px;
     transition: background .2s ease;
 }
 
@@ -41,10 +47,16 @@ nav.scrolled {
 }
 
 .logo svg {
-    width: 50px;
+    width: 55px;
     height: auto;
     fill: #C9E1ED;
-    transition: transform .4s ease;
+    transition: transform .4s ease, filter .2s ease;
+    filter: drop-shadow(2px 4px 5px black);
+    -webkit-filter: drop-shadow(2px 4px 5px black);
+}
+
+.scrolled .logo svg {
+    filter: none;
 }
 
 .logo span {
@@ -129,28 +141,159 @@ nav ul li a:hover::after {
 .navbar-darkBG.show {
     display: none;
 }
-
-.banner {
+ .banner1 .carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    background-image: url(https://imgbbb.com/images/2020/09/06/banner1.png);
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.banner p {
-    font-size: 86px;
+.banner1 .carousel-item:nth-child(1) {
+    background-image: url(https://imgbbb.com/images/2020/09/06/banner1.png);
+}
+
+.banner1 .carousel-item:nth-child(2) {
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner3.png);
+}
+
+.banner1 .carousel-item:nth-child(3) {
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner4.png);
+}
+
+.banner1 .carousel-item p {
+    font-weight: 500;
+    font-family: 'Cabin', sans-serif;
     color: #ececec;
     text-shadow: 0 3px 11px black;
 
 }
 
+.banner1 .carousel-item:nth-child(1) {
+    font-size: 86px;
+}
+
+.banner1 .carousel-item:nth-child(2) {
+    font-size: 60px;
+}
+
+.banner1 .carousel-item:nth-child(3) {
+    font-size: 86px;
+}
+
+.p1 .carousel-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.p1 .carousel-item:nth-child(1) {
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner2.png);
+}
+
+.p1 .carousel-item:nth-child(2) {
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner3.png);
+}
+
+.p1 .carousel-item:nth-child(3) {
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner4.png);
+}
+
+.p1 .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.p1 .carousel-item:nth-child(1) .layer {
+    background-color: rgba(60, 35, 24, 0.75);
+}
+
+.p1 .carousel-item:nth-child(2) .layer {
+    background-color: rgba(96, 0, 94, 0.46);
+}
+
+.p1 .carousel-item:nth-child(3) .layer {
+    background-color: rgba(18, 25, 53, 0.75);
+}
+
+.p1 .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p1 p {
+    text-align: center;
+    color: #e6d8d8;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.banner2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://imgbbb.com/images/2020/09/07/banner5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner2 p {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Cabin', sans-serif;
+    color: #ececec;
+    text-shadow: 0 3px 11px black;
+
+}
+
+.p2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #452108;
+    height: 350px;
+}
+
+.p2 p {
+    text-align: center;
+    color: #e6d8d8;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.p3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7C3C0F;
+    height: 350px;
+}
+
+.p3 p {
+    text-align: center;
+    color: #e6d8d8;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         background-color: #1F445B;
+    }
+
+    .logo svg {
+        filter: none;
     }
     
     .burger {
@@ -159,17 +302,25 @@ nav ul li a:hover::after {
 
     .navLinks {
         position: absolute;
-        top: 94px;
+        top: 90px;
         right: 0;
-        height: calc(100vh - 96px);
+        height: calc(100vh - 90px);
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         background-color: #1F445B;
         transform: translateX(100%);
         transition: all .5s ease;
+    }
+
+    .navLink {
+        justify-content: flex-start;
+        padding: 0 35%;
+    }
+
+    .navLink a:hover::after {
+        width: 0;
     }
 
     .navbar-darkBG {

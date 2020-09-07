@@ -1,6 +1,7 @@
 const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".navLinks");
+    const navLink = document.querySelectorAll(".navLink a");
     const bg = document.querySelector(".navbar-darkBG");
 
     burger.addEventListener("click", () => {
@@ -13,7 +14,15 @@ const navSlide = () => {
     bg.addEventListener("click", () => {
         nav.classList.toggle("navActive");
         burger.classList.toggle("change");
-        bg.classList.remove("show");
+        bg.classList.toggle("show");
+    });
+
+    navLink.forEach((navLink) => {
+        navLink.addEventListener("click", () => {
+            nav.classList.toggle("navActive");
+            burger.classList.toggle("change");
+            bg.classList.toggle("show");
+        });
     });
 }
 
