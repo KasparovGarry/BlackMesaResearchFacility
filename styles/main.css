@@ -134,8 +134,8 @@ nav ul li a:hover::after {
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-6px, -8px) ;
-    transform: rotate(45deg) translate(-6px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .navbar-darkBG.show {
@@ -173,7 +173,6 @@ main {
     font-family: 'Cabin', sans-serif;
     color: #ececec;
     text-shadow: 0 3px 11px black;
-
 }
 
 .banner1 .carousel-item:nth-child(1) {
@@ -207,7 +206,7 @@ main {
 .p1 .col-lg:nth-child(1),
 .p2 .col-lg:nth-child(1),
 .p3 .col-lg:nth-child(1),
-.p5 .col-lg:nth-child(1){
+.p5 .col-lg:nth-child(1) {
     display: flex;
     align-items: center;
 }
@@ -235,7 +234,8 @@ main {
     flex-direction: row-reverse;
 }
 
-.p4, .p6 {
+.p4,
+.p6 {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -281,19 +281,91 @@ main {
     font-size: 36px;
 }
 
+.p7 {
+    position: relative;
+}
+
+.p7 .col-lg {
+    display: flex;
+    justify-content: center;
+}
+
+.p7 .card {
+    width: 500px;
+    margin-top: -160px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px black;
+}
+
+.p7 .card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#scienceCard {
+    background-color: #f8dfd5;
+    border: 3px solid #970a03;
+}
+
+#securityCard {
+    background-color: #cad3fa;
+    border: 3px solid #005e83;
+}
+
+#hecuCard {
+    background-color: #d5ffb1;
+    border: 3px solid #456322;
+}
+
+#scienceCard .card-header {
+    background-color: #970a03;
+}
+
+#securityCard .card-header {
+    background-color: #005e83;
+}
+
+#hecuCard .card-header {
+    background-color: #456322;
+}
+
+.p7 .card-header img {
+    margin-top: -75px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.p7 .card-header p {
+    color: #ececec;
+    font-size: 26px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+.p7 .card-header + .container p {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Titillium Web", sans-serif;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         background-color: #1F445B;
     }
-
     .logo svg {
         filter: none;
     }
-    
     .burger {
         display: inline-block;
     }
-
     .navLinks {
         position: absolute;
         top: 90px;
@@ -307,15 +379,12 @@ main {
         transform: translateX(100%);
         transition: all .5s ease;
     }
-
     .navLink {
         justify-content: flex-start;
     }
-
     .navLink a:hover::after {
         width: 0;
     }
-
     .navbar-darkBG {
         position: absolute;
         top: 0;
@@ -328,7 +397,6 @@ main {
         background: rgba(0, 0, 0, 0.49);
         z-index: -1;
     }
-
     .navbar-darkBG.show {
         display: block;
     }
